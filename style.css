@@ -1,4 +1,3 @@
-
 :root{
     --ink:#0E2A28;
     --green:#1F9E6D;
@@ -181,15 +180,23 @@
     display:none;
   }
 
-  /* ---------- credibility ---------- */
-  .credibility .wrap{
-    display:flex; justify-content:space-between; align-items:center;
-    flex-wrap:wrap; gap:24px;
+  /* ---------- lipa namba ---------- */
+  .lipanamba{
+    background:var(--green); color:#fff;
   }
-  .cred-item{
-    font-size:0.92rem; color:var(--text-soft);
+  .lipanamba-inner{ max-width:56ch; }
+  .lipanamba-badge{
+    display:inline-flex; align-items:center;
+    font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:0.85rem;
+    background:rgba(255,255,255,0.16); color:#fff;
+    padding:6px 14px; border-radius:20px; margin-bottom:20px;
   }
-  .cred-item strong{color:var(--ink); font-weight:600;}
+  .lipanamba h2{
+    color:#fff; font-size:clamp(1.7rem,3vw,2.2rem); margin-bottom:18px; max-width:14ch;
+  }
+  .lipanamba p{
+    color:rgba(255,255,255,0.9); font-size:1.02rem; max-width:52ch;
+  }
 
   /* ---------- waitlist ---------- */
   .waitlist{

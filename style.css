@@ -50,7 +50,7 @@
     font-family:'Space Grotesk', sans-serif;
     font-weight:700; font-size:1.15rem; color:var(--ink);
   }
-  .brand .dot-mark{width:9px;height:9px;border-radius:2px;background:var(--blue);}
+  .brand .logo-mark{width:26px;height:26px;border-radius:6px;}
   nav{display:flex; gap:32px; font-size:0.95rem;}
   nav a{color:var(--text-soft); transition:color .15s;}
   nav a:hover{color:var(--ink);}
@@ -159,6 +159,7 @@
   @media (max-width:860px){ .problem .wrap{grid-template-columns:1fr; gap:32px;} }
   .problem h2{font-size:clamp(1.7rem,3vw,2.2rem); max-width:12ch;}
   .problem-points{display:flex; flex-direction:column; gap:26px;}
+  .section-lead{color:var(--text-soft); font-size:1.02rem; max-width:52ch; margin-bottom:4px;}
   .problem-point{
     padding-left:20px; border-left:2px solid var(--blue);
   }

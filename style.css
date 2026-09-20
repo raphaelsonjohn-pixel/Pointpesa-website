@@ -53,6 +53,7 @@
   .brand .brand-name{
     font-family:'Syne', sans-serif;
     font-weight:800; font-size:1.25rem; letter-spacing:-0.01em;
+    color:var(--blue);
   }
   .brand .logo-mark{width:40px;height:40px;border-radius:9px;}
   nav{display:flex; gap:32px; font-size:0.95rem;}

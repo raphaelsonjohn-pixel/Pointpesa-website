@@ -50,6 +50,7 @@
     font-family:'Space Grotesk', sans-serif;
     font-weight:700; font-size:1.15rem; color:var(--ink);
   }
+  .brand .wordmark{height:20px; width:auto;}
   .brand .brand-name{
     font-family:'Syne', sans-serif;
     font-weight:800; font-size:1.25rem; letter-spacing:-0.01em;

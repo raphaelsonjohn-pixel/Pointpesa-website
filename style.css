@@ -239,8 +239,16 @@
   /* ---------- footer ---------- */
   footer{border-top:1px solid var(--line); padding:44px 0;}
   footer .wrap{
+    display:flex; flex-direction:column; gap:16px;
+  }
+  .foot-top{
     display:flex; justify-content:space-between; align-items:center;
     flex-wrap:wrap; gap:16px;
   }
   .foot-brand{font-family:'Space Grotesk', sans-serif; font-weight:600; color:var(--ink);}
+  .foot-contact{display:flex; gap:24px; flex-wrap:wrap;}
+  .foot-contact a{
+    font-size:0.9rem; color:var(--text-soft); transition:color .15s;
+  }
+  .foot-contact a:hover{color:var(--blue);}
   .foot-note{font-size:0.85rem; color:var(--text-soft);}

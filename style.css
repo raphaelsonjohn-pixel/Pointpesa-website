@@ -88,23 +88,18 @@
   }
   .eyebrow-tag{
     display:inline-flex; align-items:center; gap:8px;
-    font-size:clamp(1rem, 2.6vw, 1.25rem); font-weight:700; color:var(--ink);
+    font-size:clamp(1rem, 2.6vw, 1.25rem); font-weight:700; color:var(--blue);
     margin-bottom:24px;
   }
   .eyebrow-tag .pip{width:7px;height:7px;border-radius:50%;background:var(--blue); flex-shrink:0;}
   .eyebrow-text{
-    display:inline-block; overflow:hidden; white-space:nowrap;
-    border-right:3px solid var(--blue);
-    width:0; max-width:100%;
-    animation: eyebrowType 2.4s steps(55, end) forwards, eyebrowCaret 0.8s step-end infinite;
+    display:inline-block;
+    opacity:0; transform:translateY(8px);
+    animation: eyebrowReveal 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
   }
-  @keyframes eyebrowType{ from{width:0;} to{width:55ch;} }
-  @keyframes eyebrowCaret{ 50%{border-color:transparent;} }
+  @keyframes eyebrowReveal{ to{opacity:1; transform:translateY(0);} }
   @media (prefers-reduced-motion: reduce){
-    .eyebrow-text{animation:none; width:auto; border-right:none;}
-  }
-  @media (max-width:480px){
-    .eyebrow-text{white-space:normal; animation:none; width:auto; border-right:none;}
+    .eyebrow-text{animation:none; opacity:1; transform:none;}
   }
   .hero h1{
     font-size:clamp(2.2rem, 4.6vw, 3.4rem);
@@ -257,18 +252,27 @@
   .form-success.show{display:block;}
 
   /* ---------- footer ---------- */
-  footer{border-top:1px solid var(--line); padding:44px 0;}
-  footer .wrap{
-    display:flex; flex-direction:column; gap:16px;
+  footer{background:var(--ink); padding:64px 0 32px;}
+  footer .wrap{display:flex; flex-direction:column; gap:40px;}
+  .foot-grid{
+    display:flex; justify-content:space-between; align-items:flex-start;
+    flex-wrap:wrap; gap:32px;
   }
-  .foot-top{
-    display:flex; justify-content:space-between; align-items:center;
-    flex-wrap:wrap; gap:16px;
+  .foot-brand-col{max-width:320px;}
+  .foot-brand{
+    font-family:'Syne', sans-serif; font-weight:800; font-size:1.3rem; color:#fff;
   }
-  .foot-brand{font-family:'Space Grotesk', sans-serif; font-weight:600; color:var(--ink);}
-  .foot-contact{display:flex; gap:24px; flex-wrap:wrap;}
-  .foot-contact a{
-    font-size:0.9rem; color:var(--text-soft); transition:color .15s;
+  .foot-tag{color:rgba(255,255,255,0.6); font-size:0.92rem; margin-top:8px;}
+  .foot-contact{display:flex; gap:40px; flex-wrap:wrap;}
+  .foot-contact-item{display:flex; flex-direction:column; gap:4px;}
+  .foot-label{
+    font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em;
+    color:rgba(255,255,255,0.45);
   }
-  .foot-contact a:hover{color:var(--blue);}
-  .foot-note{font-size:0.85rem; color:var(--text-soft);}
+  .foot-value{font-size:0.98rem; color:#fff; transition:color .15s;}
+  .foot-contact-item:hover .foot-value{color:var(--accent);}
+  .foot-bottom{
+    border-top:1px solid rgba(255,255,255,0.14); padding-top:22px;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+  .foot-note, .foot-location{font-size:0.85rem; color:rgba(255,255,255,0.5);}
